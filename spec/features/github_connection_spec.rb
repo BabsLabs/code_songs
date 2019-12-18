@@ -10,8 +10,8 @@ describe 'As a user, when I click "Sign in with GitHub"' do
     expect(page).to have_content('Logout')
 
     user = User.last
-    expect(user.github_token).to eq('mock_token')
-    expect(user.username).to eq('mockuser')
+    expect(user.token).to eq('mock_token')
+    expect(user.login).to eq('mockuser')
 
     # users have attributes: username, github_token
   end
