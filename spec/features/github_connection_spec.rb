@@ -12,8 +12,6 @@ describe 'As a user, when I click "Sign in with GitHub"' do
     user = User.last
     expect(user.token).to eq('mock_token')
     expect(user.login).to eq('mockuser')
-
-    # users have attributes: username, github_token
   end
 
   it 'signs me in and does not create a new user if i have logged in before' do
