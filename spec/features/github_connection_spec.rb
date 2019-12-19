@@ -21,11 +21,23 @@ describe 'As a user, when I click "Sign in with GitHub"' do
     visit root_path
     
     click_on 'Sign in with GitHub'
-
+    
     expect(current_path).to eq('/repos')
     expect(page).to have_content('Logout')
     expect(page).to have_content("#{user.login}")
-
+    
     expect(User.count).to eq(user_count)
+  end
+  
+  it 'does not log in a user if github handshake fails' do
+    visit root_path
+    
+    stub_omniauth_failure
+    
+    click_on 'Sign in with GitHub'
+
+    expect(page).to have_content('Failed to connect to GitHub')
+
+    expect(current_path).to eq(root_path)
   end
 end
