@@ -94,17 +94,18 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:github] = {
-    'provider' => 'github',
-    'uid' => '123545',
-    'user_info' => {
-      'name' => 'mockuser',
-      'password' => 'mock_password'
-    },
-    'credentials' => {
+end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:github] = {
+  'provider' => 'github',
+  'extra' => {
+    'raw_info' => {
+      'login' => 'mockuser'
+    }
+  },
+  'credentials' => {
     'token' => 'mock_token',
     'secret' => 'mock_secret'
-    }
   }
-end
+}
