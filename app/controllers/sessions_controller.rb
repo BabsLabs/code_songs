@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    user = User.find_or_create_by(user_params)
+    user = User.find_by(login: user_params[:login])
+    user = User.create(user_params) unless user
     flash[:success] = "You're logged in!"
     session[:user_id] = user.id
     redirect_to '/repos'
@@ -23,4 +24,6 @@ class SessionsController < ApplicationController
       token: request.env['omniauth.auth']['credentials']['token']
     }
   end
+
+  
 end
