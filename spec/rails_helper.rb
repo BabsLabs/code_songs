@@ -69,9 +69,14 @@ RSpec.configure do |config|
 end
 
 
-  Shoulda::Matchers.configure do |config|
-      config.integrate do |with|
-      with.test_framework :rspec
-      with.library :rails
-    end
+Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
   end
+end
+
+def stub_omniauth_failure
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = :invalid_credentials
+end
