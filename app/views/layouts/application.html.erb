@@ -11,9 +11,12 @@
 
   <body>
     <nav>
+      <% if current_user %>
       <ul>
+        <li><%= current_user.login %></li>
         <li><%= link_to 'Logout', logout_path %></li>
       </ul>
+      <% end %>
     </nav>
     <%= yield %>
   </body>
