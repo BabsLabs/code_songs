@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <nav>
+      <% if current_user %>
+      <ul>
+        <li><%= current_user.login %></li>
+        <li><%= link_to 'Logout', logout_path %></li>
+      </ul>
+      <% end %>
+    </nav>
+
+    <div class='flash-message'>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
