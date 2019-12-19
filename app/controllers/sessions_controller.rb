@@ -2,8 +2,10 @@ class SessionsController < ApplicationController
   def create
     # Find user by login => if it exists, make session, if no user found, make new user and log in
     # create a new user with github information
-    user = User.create(user_params)
-    if user.save
+    # user = User.find_by(user_params)
+    # binding.pry
+    user = User.find_or_create_by(user_params)
+    if user
       flash[:success] = "You're logged in!"
       session[:user_id] = user.id
       redirect_to '/repos'
