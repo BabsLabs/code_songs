@@ -1,3 +1,8 @@
+before_script:
+  - psql -c 'create database code_songs_test;' -U postgres
+
 language: ruby
 rvm:
  - 2.4.1
+services:
+ - postgresql
