@@ -76,6 +76,22 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+OmniAuth.config.test_mode = true
+def stub_omniauth
+  OmniAuth.config.mock_auth[:github] = {
+    'provider' => 'github',
+    'extra' => {
+      'raw_info' => {
+        'login' => 'mockuser'
+      }
+    },
+    'credentials' => {
+      'token' => 'mock_token',
+      'secret' => 'mock_secret'
+    }
+  }
+end
+
 def stub_omniauth_failure
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:github] = :invalid_credentials

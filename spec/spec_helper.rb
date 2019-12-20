@@ -95,17 +95,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-OmniAuth.config.test_mode = true
-OmniAuth.config.mock_auth[:github] = {
-  'provider' => 'github',
-  'extra' => {
-    'raw_info' => {
-      'login' => 'mockuser'
-    }
-  },
-  'credentials' => {
-    'token' => 'mock_token',
-    'secret' => 'mock_secret'
-  }
-}
