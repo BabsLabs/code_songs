@@ -3,3 +3,13 @@
   find a repo <%= text_field_tag :search %>
   <%= submit_tag 'search' %>
 <% end %>
+
+<% if @repos_found %>
+  <section class="found-repos">
+    <% @repos_found.each do |repo| %>
+      <ul>
+        <li><%= repo[:repo_name] %></li>
+      </ul>
+    <% end %>
+  </section>
+<% end %>
