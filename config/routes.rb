@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/auth/failure', to: 'sessions#failure'
 
   get '/repos', to: 'repos#index'
+  get '/repos_search', to: 'repos/search#index', as: 'repos_search'
 
   delete '/logout', to: 'sessions#destroy'
 end

@@ -1,1 +1,15 @@
-<h1>Repos Page!</h1>
+<h1>search for a repo</h1>
+<%= form_tag(repos_search_path, method: :get) do %>
+  find a repo <%= text_field_tag :search %>
+  <%= submit_tag 'search' %>
+<% end %>
+
+<% if repos_found && !repos_found.repos.empty? %>
+  <section class="found-repos">
+    <% repos_found.repos.each do |repo| %>
+      <ul>
+        <li><%= repo.name %></li>
+      </ul>
+    <% end %>
+  </section>
+<% end %>
