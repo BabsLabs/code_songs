@@ -13,6 +13,11 @@
     <nav>
       <% if current_user %>
       <ul>
+        <li>
+          <%= image_tag 'codesongs_logo1_smaller', id: 'code-songs-nav-logo'%>
+        </li>
+      </ul>
+      <ul class="nav-links">
         <li><%= current_user.login %></li>
         <li><%= link_to 'Logout', logout_path, method: :delete %></li>
       </ul>

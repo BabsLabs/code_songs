@@ -13,3 +13,165 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Import fonts */
+ @import url('https://fonts.googleapis.com/css?family=Monoton|Source+Code+Pro&display=swap');
+ /* font-family: 'Monoton', cursive;
+ font-family: 'Source Code Pro', monospace; */
+
+/* Set color variables */
+:root {
+  --main-font-color: black;
+  --secondary-font-color: white;
+}
+
+:root ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Set body font */
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Nav styles */
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--main-font-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links{
+  float: right;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  margin: 10px;
+  padding: 5px 20px;
+}
+
+nav a:hover {
+  color: var(--secondary-font-color);
+  background: var(--main-font-color);
+}
+
+nav img {
+  width: 200px;
+}
+
+/* Welcome page styles */
+#welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-header {
+  margin: 25px;
+}
+
+#welcome-logo {
+  width: 100%;
+}
+
+/* signin with github button logo */
+.github_login {
+  margin: 75px;
+}
+
+.btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background-color: var(--main-font-color);
+  padding: 25px 50px;
+}
+
+.btn:hover {
+  color: var(--main-font-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-font-color);
+}
+
+.btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about {
+  margin: 25px 100px;
+}
+
+/* Repo page style */
+.search-section {
+  margin: 100px
+}
+/* Search form style */
+.srch-form {
+  display: inline;
+}
+
+/* Search from input box style */
+#search {
+  border: 2px solid var(--main-font-color);
+  padding: 8px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+  margin: 12px;
+}
+
+/* search btn styles */
+.srch-btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background-color: var(--main-font-color);
+  padding: 10px 50px;
+  border: 2px solid var(--secondary-font-color);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+}
+
+.srch-btn:hover {
+  color: var(--main-font-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-font-color);
+  cursor: pointer;
+}
+
+.srch-btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Found repos */
+#found-repos {
+  margin: 100px 0px;
+}
+
+.repo {
+  list-style: none;
+  font-size: 20px;
+}
