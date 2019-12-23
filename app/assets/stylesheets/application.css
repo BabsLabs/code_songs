@@ -23,6 +23,7 @@
 :root {
   --main-font-color: black;
   --secondary-font-color: white;
+  --main-search-color: #6F00C7;
 }
 
 :root ul {
@@ -147,7 +148,7 @@ nav img {
 .srch-btn {
   align-self: center;
   color: var(--secondary-font-color);
-  background-color: var(--main-font-color);
+  background-color: var(--main-search-color);
   padding: 10px 50px;
   border: 2px solid var(--secondary-font-color);
   font-family: 'Source Code Pro', monospace;
@@ -155,9 +156,9 @@ nav img {
 }
 
 .srch-btn:hover {
-  color: var(--main-font-color);
+  color: var(--main-search-color);
   background-color: var(--secondary-font-color);
-  border: 2px solid var(--main-font-color);
+  border: 2px solid var(--main-search-color);
   cursor: pointer;
 }
 
