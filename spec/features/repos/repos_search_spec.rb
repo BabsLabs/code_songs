@@ -32,4 +32,21 @@ describe 'A signed in User can search for their repos' do
 
     expect(page).to have_content("No repo found, please search again")
   end
+
+  it 'shows a button next to the found repos to select that repo', :vcr do
+    user = create(:user, login: 'CoopTang', token: ENV['GITHUB_TEST_TOKEN'])
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    visit '/repos'
+
+    fill_in 'search', with: 'battleship'
+    click_on 'search'
+
+    expect(page).to have_content('battleship')
+
+    within '#repo-1' do
+      click_button 'Select this Code'
+    end
+
+    expect(current_path).to eq('/artists')
+  end
 end

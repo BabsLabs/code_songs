@@ -6,6 +6,11 @@ class SessionsController < ApplicationController
     redirect_to '/repos'
   end
 
+  def update
+    session[:repo_name] = params[:repo_name]
+    redirect_to '/artists'
+  end
+
   def destroy
     session.clear
     redirect_to '/'

@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   get '/repos', to: 'repos#index'
   get '/repos_search', to: 'repos/search#index', as: 'repos_search'
 
+  get '/artists', to: 'artists#index'
+
+  patch '/choose_repo', to: 'sessions#update'
   delete '/logout', to: 'sessions#destroy'
 end
