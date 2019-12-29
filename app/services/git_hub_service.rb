@@ -12,7 +12,8 @@ class GitHubService
   end
 
   def generate_uri(login, search_term, uri)
-    "search/repositories?q=#{search_term}+in:name+user:#{login}+fork:true"
+    encoded = URI.encode("search/repositories?q=#{search_term}+in:name+user:#{login}+fork:true")
+    URI.parse(encoded)
   end
 
 end
