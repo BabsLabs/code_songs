@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+ /* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Monoton|Source+Code+Pro&display=swap');
+/* font-family: 'Monoton', cursive;
+font-family: 'Source Code Pro', monospace; */
+
+/* Set color variables */
+:root {
+  --main-font-color: black;
+  --secondary-font-color: white;
+  --main-search-color: #6F00C7;
+}
+
+:root ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+
+/* Nav Styles */
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+  color: var(--main-font-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  margin: 10px;
+  padding: 5px 20px;
+}
+
+nav a:hover {
+  color: var(--secondary-font-color);
+  background: var(--main-font-color);
+}
+
+.nav-links {
+  float: right;
+}
+
+nav img {
+  width: 200px;
+}
+
+/* Welcome Page Styling */
+#welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-header {
+  margin: 25px;
+}
+
+#welcome-logo {
+  width: 100%;
+}
+
+.btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background: var(--main-font-color);
+  padding: 25px 50px;
+}
+
+.btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: var(--main-font-color);
+  background: var(--secondary-font-color);
+  border: 2px solid var(--main-font-color);
+}
+
+#about {
+  margin: 25px;
+}
