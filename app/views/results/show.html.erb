@@ -1,0 +1,4 @@
+<section>
+  <p>the song for your repo <%= songs_found.repo %> is <%= songs_found.songs.first.title %> by <%= songs_found.artist_name %></p>
+  <%= link_to "play #{songs_found.songs.first.title}", songs_found.songs.first.link %>
+</section>
