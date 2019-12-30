@@ -21,14 +21,15 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '488'
+      - '490'
       Accept-Ranges:
       - bytes
       - bytes
       - bytes
       Age:
-      - '93'
-      - '93'
+      - '0'
+      - '0'
+      - '0'
       Content-Type:
       - text/plain; charset=utf-8
       Server:
@@ -41,20 +42,20 @@ http_interactions:
       X-Varnish-Instance:
       - api
       Date:
-      - Mon, 30 Dec 2019 17:58:12 GMT
+      - Mon, 30 Dec 2019 20:06:15 GMT
       X-Served-By:
-      - cache-den19625-DEN
+      - cache-den19634-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1577728692.459517,VS0,VE58
+      - S1577736375.155456,VS0,VE133
       Vary:
       - Accept-Encoding
     body:
       encoding: ASCII-8BIT
-      string: '{"message":{"header":{"status_code":200,"execute_time":0.021111011505127,"available":3226},"body":{"artist_list":[{"artist":{"artist_id":702,"artist_name":"Elvis
+      string: '{"message":{"header":{"status_code":200,"execute_time":0.024478912353516,"available":3226},"body":{"artist_list":[{"artist":{"artist_id":702,"artist_name":"Elvis
         Presley","artist_name_translation_list":[],"artist_comment":"","artist_country":"US","artist_alias_list":[{"artist_alias":"\u30a8\u30eb\u30f4\u30a3\u30b9
         \u30d7\u30ec\u30b9\u30ea\u30fc"},{"artist_alias":"Elvis Aaron Presley"},{"artist_alias":"Elvis
         A. Presley"},{"artist_alias":"Elivs Presley"},{"artist_alias":"Elvis Priesley"},{"artist_alias":"Presley"},{"artist_alias":"
@@ -66,5 +67,5 @@ http_interactions:
         (The Costello Show)"},{"artist_alias":"The Costello Show"},{"artist_alias":"Elvis
         Cosztello"}],"artist_rating":55,"artist_twitter_url":"https:\/\/twitter.com\/elviscostello","artist_credits":{"artist_list":[]},"restricted":0,"updated_time":"2013-11-05T11:24:56Z"}}]}}}'
     http_version: 
-  recorded_at: Mon, 30 Dec 2019 17:58:12 GMT
+  recorded_at: Mon, 30 Dec 2019 20:06:15 GMT
 recorded_with: VCR 5.0.0

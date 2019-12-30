@@ -1,0 +1,8 @@
+<center>
+  <p>confirm your selection</p>
+  <ul>
+    <li id="found-repo"><%= songify_cart.repo %> <%= button_to 'change repo', '/repos', method: :get  %></li>
+    <li id="found-artist"><%= songify_cart.artist_name %> <%= button_to 'change artist', '/artists', method: :get %></li>
+  </ul>
+  <%= button_to 'Songify my Code' %>
+</center>

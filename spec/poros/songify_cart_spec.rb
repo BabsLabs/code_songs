@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe SongifyCart do
   it 'has attributes' do
-    cart = SongifyCart.new
+    cart = SongifyCart.new({})
 
     expect(cart).to be_a(SongifyCart)
     expect(cart.repo).to eq(nil)
@@ -11,15 +11,15 @@ describe SongifyCart do
   end
 
   it 'can add a repo' do
-    cart = SongifyCart.new
+    cart = SongifyCart.new({})
 
     cart.add_repo('battleship')
 
     expect(cart.repo).to eq('battleship')
   end
-  
+
   it 'can add a artist' do
-    cart = SongifyCart.new
+    cart = SongifyCart.new({})
 
     cart.add_artist('Elivis Presley', '3')
 

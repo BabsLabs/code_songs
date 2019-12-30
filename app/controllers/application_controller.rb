@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def songify_cart
-    @songify_cart ||= SongifyCart.new
+    @songify_cart ||= SongifyCart.new(session[:songify_cart] ||= Hash.new(0))
   end
 end

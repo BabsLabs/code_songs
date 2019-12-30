@@ -37,9 +37,9 @@ describe 'A signed in User can search for their repos' do
     user = create(:user, login: 'CoopTang', token: ENV['GITHUB_TEST_TOKEN'])
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    songify_cart = SongifyCart.new
+    songify_cart = SongifyCart.new({})
     allow_any_instance_of(ApplicationController).to receive(:songify_cart).and_return(songify_cart)
-    
+
     visit '/repos'
 
     fill_in 'search', with: 'battleship'
