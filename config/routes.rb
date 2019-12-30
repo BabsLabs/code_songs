@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   get '/artists', to: 'artists#index'
 
-  patch '/choose_repo', to: 'sessions#update'
+  patch '/choose_repo', to: 'songify_cart#update'
   delete '/logout', to: 'sessions#destroy'
 end
