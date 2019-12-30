@@ -43,5 +43,12 @@ describe 'As a user' do
 
     expect(current_path).to eq('/confirm')
   end
+
+  it "shows a flash message no artist found if no artist found", :vcr do
+
+    fill_in 'search', with: '$$'
+    click_on 'search'
+
+    expect(page).to have_content("No artist found, please search again")
+  end
 end
-    
