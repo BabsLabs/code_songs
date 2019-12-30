@@ -10,7 +10,7 @@ describe 'As a user' do
     @user = create(:user, login: 'CoopTang', token: ENV['GITHUB_TEST_TOKEN'])
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
-    @songify_cart = SongifyCart.new
+    @songify_cart = SongifyCart.new({})
     allow_any_instance_of(ApplicationController).to receive(:songify_cart).and_return(@songify_cart)
 
     @songify_cart.add_repo('battleship')
