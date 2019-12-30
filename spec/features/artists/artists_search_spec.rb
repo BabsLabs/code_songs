@@ -29,5 +29,19 @@ describe 'As a user' do
       expect(page).to have_content('Elvis Costello')
     end
   end
+
+  it 'shows a button next to the found artists to select that artist', :vcr do
+    fill_in 'search', with: 'Elvis'
+    click_on 'search'
+
+    within '#artist-1' do
+      click_button 'Select this Artist'
+    end
+
+    expect(@songify_cart.artist_name).to eq('Elvis Presley')
+    expect(@songify_cart.artist_id).to eq('702')
+
+    expect(current_path).to eq('/confirm')
+  end
 end
     
