@@ -10,6 +10,7 @@ describe 'After a user signs in with GitHub, they see a repos page' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit '/repos'
 
+    expect(page).to have_content('search for a repo')
     expect(page).to have_css('#search')
     expect(page).to have_button('search')
   end

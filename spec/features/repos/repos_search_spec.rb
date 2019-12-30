@@ -36,6 +36,10 @@ describe 'A signed in User can search for their repos' do
   it 'shows a button next to the found repos to select that repo', :vcr do
     user = create(:user, login: 'CoopTang', token: ENV['GITHUB_TEST_TOKEN'])
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    songify_cart = SongifyCart.new
+    allow_any_instance_of(ApplicationController).to receive(:songify_cart).and_return(songify_cart)
+    
     visit '/repos'
 
     fill_in 'search', with: 'battleship'
@@ -46,6 +50,8 @@ describe 'A signed in User can search for their repos' do
     within '#repo-1' do
       click_button 'Select this Code'
     end
+
+    expect(songify_cart.repo).to eq('battleship')
 
     expect(current_path).to eq('/artists')
   end
