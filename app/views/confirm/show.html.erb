@@ -1,8 +1,10 @@
 <center>
   <p>confirm your selection</p>
-  <ul>
-    <li id="found-repo"><%= songify_cart.repo %> <%= button_to 'change repo', '/repos', method: :get  %></li>
-    <li id="found-artist"><%= songify_cart.artist_name %> <%= button_to 'change artist', '/artists', method: :get %></li>
-  </ul>
-  <%= button_to 'Songify my Code', '/results', method: :get  %>
+  <section class="confirmed-section">
+    <ul>
+      <li id="found-repo"><p><%= songify_cart.repo %></p> <%= button_to 'change repo', '/repos', method: :get, class: 'select-btn'  %></li>
+      <li id="found-artist"><p><%= songify_cart.artist_name %></p>  <%= button_to 'change artist', '/artists', method: :get, class: 'select-btn' %></li>
+    </ul>
+    <%= button_to 'Songify my Code', '/results', method: :get, class: 'srch-btn'  %>
+  </section>
 </center>

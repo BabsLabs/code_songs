@@ -4,29 +4,22 @@
     <p>find a repo <%= text_field_tag :search %>
     <%= submit_tag 'search', class: 'srch-btn'%></p>
   <% end %>
+<center>
 
+<center>
+  <h2>Select a Codebase to Songify</h2>
   <% if repos_found && !repos_found.repos.empty? %>
-    <section id="found-repos">
-      <h2>Select a Codebase to Songify</h2>
-      <% repos_found.repos.each do |repo| %>
+    <section class="found-repos">
+      <% repos_found.repos.each_with_index do |repo, i| %>
         <ul>
-          <li class="repo"><%= repo.name %></li>
+          <li id='repo-<%= i + 1 %>'>
+            <p><%= repo.name %></p>
+               <%= button_to 'Select this Code', choose_repo_path(repo_name: repo.name), method: :patch, class: 'select-btn' %>
+          </li>
         </ul>
       <% end %>
     </section>
+  <% elsif repos_found && repos_found.repos.empty? %>
+    <%= repos_found.bad_search %>
   <% end %>
 </center>
-
-<% if repos_found && !repos_found.repos.empty? %>
-  <section class="found-repos">
-    <% repos_found.repos.each_with_index do |repo, i| %>
-      <ul>
-        <li id='repo-<%= i + 1 %>'>
-          <%= repo.name %> <%= button_to 'Select this Code', choose_repo_path(repo_name: repo.name), method: :patch %>
-        </li>
-      </ul>
-    <% end %>
-  </section>
-<% elsif repos_found && repos_found.repos.empty? %>
-  <%= repos_found.bad_search %>
-<% end %>

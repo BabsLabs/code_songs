@@ -23,6 +23,7 @@ font-family: 'Source Code Pro', monospace; */
   --main-font-color: black;
   --secondary-font-color: white;
   --main-search-color: #6F00C7;
+  --main-select-color: #1C3738;
 }
 
 :root ul {
@@ -165,12 +166,47 @@ nav img {
   font-weight: bold;
 }
 
-/* Found repos */
-#found-repos {
-  margin: 100px 0px;
+/* select btn styles */
+.select-btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background-color: var(--main-select-color);
+  padding: 10px 50px;
+  border: 2px solid var(--secondary-font-color);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
 }
 
-.repo {
-  list-style: none;
-  font-size: 20px;
+.select-btn:hover {
+  color: var(--main-select-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-select-color);
+  cursor: pointer;
+}
+
+.select-btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Found repos */
+
+.found-repos ul {
+  list-style-type: none;
+}
+
+/* Found repos */
+
+.found-artists ul {
+  list-style-type: none;
+}
+
+/* Found repos */
+
+.confirmed-section ul {
+  list-style-type: none;
+  padding: 10px;
+}
+.confirmed-section li {
+  padding: 10px;
 }
