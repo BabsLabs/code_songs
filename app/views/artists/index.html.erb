@@ -1,7 +1,7 @@
 <center class="search-section">
   <h1>search for an artist</h1>
   <%= form_tag(artists_search_path, method: :get, class: 'srch-form') do %>
-    find an artist <%= text_field_tag :search %>
+    <%= text_field_tag :search, placeholder="Enter an artist" %>
     <%= submit_tag 'search', class: 'srch-btn' %>
   <% end %>
 <center>
