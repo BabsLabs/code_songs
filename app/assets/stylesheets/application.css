@@ -13,11 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
  /* Import fonts */
- @import url('https://fonts.googleapis.com/css?family=Monoton|Source+Code+Pro&display=swap');
- /* font-family: 'Monoton', cursive;
- font-family: 'Source Code Pro', monospace; */
+@import url('https://fonts.googleapis.com/css?family=Monoton|Source+Code+Pro&display=swap');
+/* font-family: 'Monoton', cursive;
+font-family: 'Source Code Pro', monospace; */
 
 /* Set color variables */
 :root {
@@ -44,7 +43,8 @@ p {
   font-size: 20px;
 }
 
-/* Nav styles */
+
+/* Nav Styles */
 nav {
   width: 100%;
 }
@@ -52,8 +52,6 @@ nav {
 nav ul {
   display: inline-block;
   list-style: none;
-  margin: 0;
-  padding: 0;
   color: var(--main-font-color);
   font-weight: bold;
   font-size: 20px;
@@ -83,7 +81,7 @@ nav img {
   width: 200px;
 }
 
-/* Welcome page styles */
+/* Welcome Page Styling */
 #welcome-wrapper {
   display: flex;
   flex-direction: column;
@@ -91,7 +89,7 @@ nav img {
   justify-content: center;
 }
 
-.welcome-header {
+#welcome-header {
   margin: 25px;
 }
 

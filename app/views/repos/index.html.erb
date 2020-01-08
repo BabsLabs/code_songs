@@ -17,3 +17,16 @@
   <% end %>
 </center>
 
+<% if repos_found && !repos_found.repos.empty? %>
+  <section class="found-repos">
+    <% repos_found.repos.each_with_index do |repo, i| %>
+      <ul>
+        <li id='repo-<%= i + 1 %>'>
+          <%= repo.name %> <%= button_to 'Select this Code', choose_repo_path(repo_name: repo.name), method: :patch %>
+        </li>
+      </ul>
+    <% end %>
+  </section>
+<% elsif repos_found && repos_found.repos.empty? %>
+  <%= repos_found.bad_search %>
+<% end %>

@@ -1,18 +1,16 @@
-<div id="welcome-wrapper">
-  <header class="welcome-header">
+<section id='welcome-wrapper'>
+  <section id = 'welcome-header'>
     <h1>Welcome to</h1>
     <%= image_tag 'codesongs_logo1_smaller', id: 'welcome-logo'%>
-  </header>
-
-  <section >
-    <div class="github_login">
-      <%= link_to 'Sign in with GitHub', github_connect_path, class: "btn" %>
-    </div>
   </section>
 
-  <section class='about'>
+  <section id='github-login'>
+    <%= link_to 'Sign in with GitHub', github_connect_path, class:'btn' %>
+  </section>
+
+  <section id='about'>
     <h2>About</h2>
     <p id='about-text'>Do you need to know what your code’s theme song is? Do you need a hype song for an audience as you present your software to a group of investors? </p>
-  <p>Code Songs is an app that analyzes the words in a select GitHub repo and finds the song that most matches it from an artist of your choice. You just select a repo of yours, an artist of your choice, and let our algorithm find your code’s matching song!</p>
+    <p>Code Songs is an app that analyzes the words in a select GitHub repo and finds the song that most matches it from an artist of your choice. You just select a repo of yours, an artist of your choice, and let our algorithm find your code’s matching song!</p>
   </section>
-</div>
+</section>

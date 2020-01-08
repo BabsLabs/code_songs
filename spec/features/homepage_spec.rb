@@ -7,7 +7,7 @@ describe 'As a user on the homepage' do
     expect(page).to have_css("img[src*='/assets/codesongs_logo1_smaller']")
     expect(page).to have_link("Sign in with GitHub")
 
-    within(".about") do
+    within("#about") do
       expect(page).to have_content("About")
       expect(page).to have_css("#about-text")
     end
