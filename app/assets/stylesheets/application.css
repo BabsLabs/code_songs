@@ -99,8 +99,8 @@ nav img {
 }
 
 /* signin with github button logo */
-.github_login {
-  margin: 75px;
+#github-login {
+  margin: 30px 0px 10px 0px;
 }
 
 .btn {
@@ -121,7 +121,7 @@ nav img {
   font-weight: bold;
 }
 
-.about {
+#about {
   margin: 25px 100px;
 }
 
