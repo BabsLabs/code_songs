@@ -23,6 +23,7 @@ font-family: 'Source Code Pro', monospace; */
   --main-font-color: black;
   --secondary-font-color: white;
   --main-search-color: #6F00C7;
+  --main-select-color: #1C3738;
 }
 
 :root ul {
@@ -30,12 +31,9 @@ font-family: 'Source Code Pro', monospace; */
   margin: 0;
 }
 
+/* Set body font */
 body {
   font-family: 'Source Code Pro', monospace;
-}
-
-h1 {
-  font-size: 40px;
 }
 
 h2 {
@@ -60,6 +58,10 @@ nav ul {
   font-size: 20px;
 }
 
+.nav-links{
+  float: right;
+}
+
 nav li {
   display: inline;
 }
@@ -74,10 +76,6 @@ nav a {
 nav a:hover {
   color: var(--secondary-font-color);
   background: var(--main-font-color);
-}
-
-.nav-links {
-  float: right;
 }
 
 nav img {
@@ -100,11 +98,24 @@ nav img {
   width: 100%;
 }
 
+/* signin with github button logo */
+#github-login {
+  margin: 30px 0px 10px 0px;
+}
+
 .btn {
   align-self: center;
   color: var(--secondary-font-color);
-  background: var(--main-font-color);
+  background-color: var(--main-search-color);
   padding: 25px 50px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: var(--main-search-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-search-color);
 }
 
 .btn, a {
@@ -112,12 +123,92 @@ nav img {
   font-weight: bold;
 }
 
-.btn:hover {
-  color: var(--main-font-color);
-  background: var(--secondary-font-color);
-  border: 2px solid var(--main-font-color);
+#about {
+  margin: 25px 100px;
 }
 
-#about {
-  margin: 25px;
+/* Repo page style */
+.search-section {
+  margin: 100px
+}
+/* Search form style */
+.srch-form {
+  display: inline;
+}
+
+/* Search from input box style */
+#search {
+  border: 2px solid var(--main-font-color);
+  padding: 8px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+  margin: 12px;
+}
+
+/* search btn styles */
+.srch-btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background-color: var(--main-search-color);
+  padding: 10px 50px;
+  border: 2px solid var(--secondary-font-color);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+}
+
+.srch-btn:hover {
+  color: var(--main-search-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-search-color);
+  cursor: pointer;
+}
+
+.srch-btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* select btn styles */
+.select-btn {
+  align-self: center;
+  color: var(--secondary-font-color);
+  background-color: var(--main-select-color);
+  padding: 10px 50px;
+  border: 2px solid var(--secondary-font-color);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+}
+
+.select-btn:hover {
+  color: var(--main-select-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--main-select-color);
+  cursor: pointer;
+}
+
+.select-btn, a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Found repos */
+
+.found-repos ul {
+  list-style-type: none;
+}
+
+/* Found repos */
+
+.found-artists ul {
+  list-style-type: none;
+}
+
+/* Found repos */
+
+.confirmed-section ul {
+  list-style-type: none;
+  padding: 10px;
+}
+.confirmed-section li {
+  padding: 10px;
 }

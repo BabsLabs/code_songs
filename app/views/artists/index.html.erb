@@ -1,19 +1,25 @@
-<h1>search for an artist</h1>
-<%= form_tag(artists_search_path, method: :get) do %>
-  find an artist <%= text_field_tag :search %>
-  <%= submit_tag 'search' %>
-<% end %>
+<center class="search-section">
+  <h1>search for an artist</h1>
+  <%= form_tag(artists_search_path, method: :get, class: 'srch-form') do %>
+    <%= text_field_tag :search, placeholder="Enter an artist" %>
+    <%= submit_tag 'search', class: 'srch-btn' %>
+  <% end %>
+<center>
 
-<% if artists_found && !artists_found.artists.empty? %>
-  <section class="found-artists">
-    <% artists_found.artists.each_with_index do |artist, i| %>
-      <ul>
-        <li id='artist-<%= i + 1 %>'>
-          <%= artist.name %> <%= button_to 'Select this Artist', choose_artist_path(artist_name: artist.name, artist_id: artist.id), method: :patch %>
-        </li>
-      </ul>
-    <% end %>
-  </section>
-<% elsif artists_found && artists_found.artists.empty? %>
-  <%= artists_found.bad_search %>
-<% end %>
+<center>
+  <% if artists_found && !artists_found.artists.empty? %>
+  <h2>Select an Artist</h2>
+    <section class="found-artists">
+      <% artists_found.artists.each_with_index do |artist, i| %>
+        <ul>
+          <li id='artist-<%= i + 1 %>'>
+            <p><%= artist.name %></p> <%= button_to 'Select this Artist', choose_artist_path(artist_name: artist.name, artist_id: artist.id), method: :patch, class: 'select-btn' %>
+            <hr>
+          </li>
+        </ul>
+      <% end %>
+    </section>
+  <% elsif artists_found && artists_found.artists.empty? %>
+    <%= artists_found.bad_search %>
+  <% end %>
+</center>
