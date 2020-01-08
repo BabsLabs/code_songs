@@ -106,14 +106,16 @@ nav img {
 .btn {
   align-self: center;
   color: var(--secondary-font-color);
-  background-color: var(--main-font-color);
+  background-color: var(--main-search-color);
   padding: 25px 50px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
 }
 
 .btn:hover {
-  color: var(--main-font-color);
+  color: var(--main-search-color);
   background-color: var(--secondary-font-color);
-  border: 2px solid var(--main-font-color);
+  border: 2px solid var(--main-search-color);
 }
 
 .btn, a {

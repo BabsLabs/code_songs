@@ -7,14 +7,14 @@
 <center>
 
 <center>
-  <h2>Select a Codebase to Songify</h2>
   <% if repos_found && !repos_found.repos.empty? %>
+  <h2>Select a Codebase to Songify</h2>
     <section class="found-repos">
       <% repos_found.repos.each_with_index do |repo, i| %>
         <ul>
           <li id='repo-<%= i + 1 %>'>
-            <p><%= repo.name %></p>
-               <%= button_to 'Select this Code', choose_repo_path(repo_name: repo.name), method: :patch, class: 'select-btn' %>
+            <p><%= repo.name %></p> <%= button_to 'Select this Code', choose_repo_path(repo_name: repo.name), method: :patch, class: 'select-btn' %>
+            <hr>
           </li>
         </ul>
       <% end %>
