@@ -18,8 +18,7 @@ class SongifyService
     response = conn.get('/codesongs_matcher') do |req|
       req.headers = {'login'=> @login, 'repo'=> @repo, 'token'=>@token, 'artist_id'=> @artist_id}
     end
-    collection = JSON.parse(response.body)
-    binding.pry
+    JSON.parse(response.body)
   end
 
   private
