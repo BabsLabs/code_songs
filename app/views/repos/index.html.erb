@@ -1,7 +1,7 @@
 <center class="search-section">
   <h1>search for a repo</h1>
   <%= form_tag(repos_search_path, method: :get, class: 'srch-form') do %>
-    <%= text_field_tag :search, placeholder="Enter a repo" %>
+    <%= text_field_tag :search, nil, placeholder: "Enter a repo" %>
     <%= submit_tag 'search', class: 'srch-btn'%>
   <% end %>
 <center>
