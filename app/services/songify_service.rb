@@ -7,7 +7,7 @@ class SongifyService
     @artist_id = cart.artist_id
   end
 
-  def songs
+  def home
     response = conn.get('/')
     response.body
   end

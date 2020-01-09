@@ -9,6 +9,7 @@ describe SongifyService do
 
     expect(songify_service).to be_a(SongifyService)
 
-    expect(songify_service.songs).to eq 'Hello World!'
+    expect(songify_service.home).to eq 'Hello World!'
+  end
   end
 end
