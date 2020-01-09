@@ -116,6 +116,7 @@ nav img {
   color: var(--main-search-color);
   background-color: var(--secondary-font-color);
   border: 2px solid var(--main-search-color);
+  cursor: pointer;
 }
 
 .btn, a {
