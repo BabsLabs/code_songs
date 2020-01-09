@@ -33,7 +33,9 @@ describe 'As a User' do
 
       expect(current_path).to eq('/results')
       expect(page).to have_content("the song for your repo battleship is Hound Dog by Elvis Presley")
-      expect(page).to have_link('play Hound Dog')
+      expect(page).to have_css('#youtube-video')
+      expect(page).to have_selector('iframe')
+
     end
   end
 end
