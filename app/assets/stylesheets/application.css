@@ -213,3 +213,8 @@ nav img {
 .confirmed-section li {
   padding: 10px;
 }
+
+/* Start over button */
+#start-over-button {
+  margin-top: 20px; 
+}
