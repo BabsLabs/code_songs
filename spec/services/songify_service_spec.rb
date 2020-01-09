@@ -20,10 +20,11 @@ describe SongifyService do
     cart = SongifyCart.new({'repo' => 'battleship', 'artist_name' => 'Ed Sheeran', 'artist_id'=> '38620990'})
 
     songify_service = SongifyService.new(user, cart)
+    songs_collection = songify_service.match_songs
 
-    expect(songify_service.match_songs).to be_a Array
-    expect(songify_service.match_songs.first).to be_a Hash
-    expect(songify_service.match_songs.first).to have_key :title
-    expect(songify_service.match_songs.first).to have_key :link
+    expect(songs_collection).to be_a Array
+    expect(songs_collection.first).to be_a Hash
+    expect(songs_collection.first).to have_key :title
+    expect(songs_collection.first).to have_key :link
   end
 end
