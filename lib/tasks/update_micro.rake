@@ -6,7 +6,7 @@ task :update_micro_database => :environment do
 end
 
 task :seed_micro_database => :environment do
-  puts "Updating microservice database..."
+  puts "Seeding microservice database..."
   Faraday.post(ENV['MICRO_SERVICE_SEED_ENDPOINT'])
   puts "done."
 end
