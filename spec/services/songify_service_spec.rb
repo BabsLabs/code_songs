@@ -13,9 +13,6 @@ describe SongifyService do
   end
 
   it 'can retrieve json from codesongs_matcher endpoint', :vcr do
-    WebMock.enable_net_connect!
-    VCR.eject_cassette
-    VCR.turn_off!(ignore_cassettes: true)
     user = create(:user, login: 'ap2322', token: ENV['GITHUB_TEST_TOKEN'])
     cart = SongifyCart.new({'repo' => 'battleship', 'artist_name' => 'Ed Sheeran', 'artist_id'=> '38620990'})
 

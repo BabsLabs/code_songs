@@ -67,5 +67,23 @@ describe 'As a User' do
 
       expect(current_path).to eq('/repos')
     end
+
+    scenario 'the results page shows dynamic results', :vcr do
+      user = create(:user, login: 'ap2322', token: ENV['GITHUB_TEST_TOKEN'])
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      @songify_cart = SongifyCart.new({})
+      allow_any_instance_of(ApplicationController).to receive(:songify_cart).and_return(@songify_cart)
+
+      @songify_cart.add_repo('battleship')
+      @songify_cart.add_artist("Jimmy Buffett", '1131')
+
+      visit '/confirm'
+
+      click_on "Songify my Code"
+
+      expect(current_path).to eq('/results')
+      expect(page).to have_content("Cheeseburger in Paradise")
+    end
   end
 end
