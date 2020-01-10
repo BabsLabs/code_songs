@@ -1,5 +1,5 @@
 <center>
   <h2>the song for your repo <%= songs_found.repo %> is <%= songs_found.songs.first.title %> by <%= songs_found.artist_name %></h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= songs_found.songs.first.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube-video"></iframe>
+  <iframe width="560" height="315" src="<%= songs_found.songs.first.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube-video"></iframe>
   <%= button_to 'Start Over', '/repos', method: 'get', class: 'btn', id: 'start-over-button' %>
 </center>
