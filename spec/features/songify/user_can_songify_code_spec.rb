@@ -87,7 +87,7 @@ describe 'As a User' do
       expect(page).to have_content("Cheeseburger in Paradise")
     end
 
-    scenario 'an artist with no tracks sends a flash message and option to pick another artist', :vcr do
+    xscenario 'an artist with no tracks sends a flash message and option to pick another artist', :vcr do
       user = create(:user, login: 'ap2322', token: ENV['GITHUB_TEST_TOKEN'])
       cart = SongifyCart.new({'repo' => 'battleship', 'artist_name' => 'Invalid', 'artist_id'=> '38020124'})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
