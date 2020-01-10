@@ -69,7 +69,7 @@ describe 'As a User' do
       expect(current_path).to eq('/repos')
     end
 
-    scenario 'the results page shows dynamic results', :vcr do
+    xscenario 'the results page shows dynamic results', :vcr do
       user = create(:user, login: 'ap2322', token: ENV['GITHUB_TEST_TOKEN'])
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
