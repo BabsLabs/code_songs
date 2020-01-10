@@ -17,8 +17,9 @@ class SongifyService
     response = conn.get('/codesongs_matcher') do |req|
       req.headers = {'login'=> @login, 'repo'=> @repo, 'token'=>@token, 'artist_id'=> @artist_id}
     end
-    puts response.body
-    JSON.parse(response.body, symbolize_names: true)
+    json = response.body.to_json
+    r = JSON.parse(json, :quirks_mode => true)
+    JSON.parse(r, symbolize_names: true)
   end
 
   private
