@@ -64,9 +64,6 @@ The following Ruby Gems are used in this project:
   - `bundle exec rake db:migrate`
   - `bundle exec rake db:seed`
 
-#### Test Environment:
-  - `RACK_ENV=test bundle exec rake db:{migrate,seed}`
-
 ### Running Tests:
   - You can run the full testing suite with the command `bundle exec rspec`
 
