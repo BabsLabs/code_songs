@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://code-songs-microservice.herokuapp.com/codesongs_matcher
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Login:
+      - ap2322
+      Repo:
+      - battleship
+      Token:
+      - "<GITHUB_TEST_TOKEN>"
+      Artist-Id:
+      - '38020124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '35'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
+      Date:
+      - Fri, 10 Jan 2020 03:17:10 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"error":"Artist has no tracks."}]'
+    http_version: 
+  recorded_at: Fri, 10 Jan 2020 03:17:08 GMT
+recorded_with: VCR 5.0.0

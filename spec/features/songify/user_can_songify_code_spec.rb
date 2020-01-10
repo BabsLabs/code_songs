@@ -86,5 +86,19 @@ describe 'As a User' do
       expect(current_path).to eq('/results')
       expect(page).to have_content("Cheeseburger in Paradise")
     end
+
+    xscenario 'an artist with no tracks sends a flash message and option to pick another artist', :vcr do
+      user = create(:user, login: 'ap2322', token: ENV['GITHUB_TEST_TOKEN'])
+      cart = SongifyCart.new({'repo' => 'battleship', 'artist_name' => 'Invalid', 'artist_id'=> '38020124'})
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:songify_cart).and_return(cart)
+
+      visit '/confirm'
+
+      click_on "Songify my Code"
+
+      expect(page).to have_content('No tracks found, please select another artist')
+      expect(page).to have_button('change artist')
+    end
   end
 end
