@@ -40,7 +40,6 @@ The following Ruby Gems are used in this project:
 
 * [faraday](https://github.com/lostisland/faraday)
 * [figaro](https://github.com/laserlemon/figaro)
-* [dotenv](https://github.com/motdotla/dotenv)
 * [omniauth-github](https://github.com/omniauth/omniauth-github)
 * [capybara](https://github.com/teamcapybara/capybara)
 * [factory bot](https://github.com/thoughtbot/factory_bot_rails)
@@ -69,8 +68,8 @@ The following Ruby Gems are used in this project:
 
   - You can run an individual test using `bundle exec rspec <path-to-file>`
 
-### Using Fiagro or DOTENV in development and testing:
-Keep enviornment variables secure by using Figaro to generate an `appliation.yml` file or by saving a `.env` file in the root directory. See more information about using the figaro gem at or https://github.com/laserlemon/figaro the dotenv gem at https://github.com/bkeepers/.
+### Using Fiagro in development and testing:
+Keep environment variables secure by using Figaro to generate an `application.yml` file. See more information about using the figaro gem at https://github.com/laserlemon/figaro.
 
 ### Required Environment Variables
 Environment variables and required API keys/tokens (in Figaro format) :
@@ -78,7 +77,6 @@ Environment variables and required API keys/tokens (in Figaro format) :
 1. GitHub ID defined as `ENV['GITHUB_SECRET']`
 1. GitHub Token defined as `ENV['GITHUB_TEST_TOKEN']`
 1. MusixMatch Token defined as `ENV['MUSIX_MATCH_TOKEN']`
-1. Watson URL (instance) defined as `ENV['WATSON_URL']`
 
 ### Refreshing VCR Test Cassettes
 From time to time you may receive an error when testing with the VCR. You can delete the cassettes directory from your `spec` folder and run `bundle exec rspec` to refresh the cassettes used. More information on VCR cassettes can be found in the [VCR documentation](https://github.com/vcr/vcr).
