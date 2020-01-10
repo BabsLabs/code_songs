@@ -5,15 +5,25 @@ class SongifyService
     @login = user.login
     @repo = cart.repo
     @artist_id = cart.artist_id
+    @heroku_url = 'https://code-songs-microservice.herokuapp.com'
   end
 
-  def songs
+  def home
     response = conn.get('/')
     response.body
   end
 
+  def match_songs
+    response = conn.get('/codesongs_matcher') do |req|
+      req.headers = {'login'=> @login, 'repo'=> @repo, 'token'=>@token, 'artist_id'=> @artist_id}
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  private
+
   def conn
-    Faraday.new(url: 'https://code-songs-microservice.herokuapp.com') do |f|
+    Faraday.new(url: @heroku_url) do |f|
       f.adapter Faraday.default_adapter
     end
   end
