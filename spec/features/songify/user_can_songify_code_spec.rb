@@ -21,11 +21,11 @@ describe 'As a User' do
       visit '/confirm'
 
       # mock song hash returned from sinatra
-      mock_songs_info = [{title: 'Hound Dog', link: 'mock_link_hd'},
+      mock_songs_info = {songs: [{title: 'Hound Dog', link: 'mock_link_hd'},
                     {title: "Can't Help Falling in Love", link: 'mock_link_love'},
                     {title: 'Suspicious Minds', link: 'mock_link_minds'},
                     {title: 'Jailhouse Rock', link: 'mock_link_jail'},
-                    {title: 'Blue Hawaii', link: 'mock_link_hawaii'}]
+                    {title: 'Blue Hawaii', link: 'mock_link_hawaii'}]}
 
       allow_any_instance_of(SongsFacade).to receive(:fetch_matching_songs).and_return(mock_songs_info)
 
@@ -51,11 +51,12 @@ describe 'As a User' do
       visit '/confirm'
 
       # mock song hash returned from sinatra
-      mock_songs_info = [{title: 'Hound Dog', link: 'mock_link_hd'},
+      mock_songs_info = {songs: [{title: 'Hound Dog', link: 'mock_link_hd'},
                     {title: "Can't Help Falling in Love", link: 'mock_link_love'},
                     {title: 'Suspicious Minds', link: 'mock_link_minds'},
                     {title: 'Jailhouse Rock', link: 'mock_link_jail'},
                     {title: 'Blue Hawaii', link: 'mock_link_hawaii'}]
+                  }
 
       allow_any_instance_of(SongsFacade).to receive(:fetch_matching_songs).and_return(mock_songs_info)
 

@@ -15,7 +15,7 @@ class SongsFacade
   end
 
   def songs_array
-    fetch_matching_songs.map do |info|
+    fetch_matching_songs[:songs].map do |info|
       Song.new(info)
     end
   end
