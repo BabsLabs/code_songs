@@ -31,7 +31,7 @@ http_interactions:
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
-      - '386'
+      - '396'
       X-Xss-Protection:
       - 1; mode=block
       X-Content-Type-Options:
@@ -41,14 +41,14 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.5.7/2019-10-01)
       Date:
-      - Thu, 09 Jan 2020 23:11:43 GMT
+      - Fri, 10 Jan 2020 02:29:44 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '[{"title":"Shape of You","link":"https://www.youtube.com/embed/JGwWNGJdvx8"},{"title":"Thinking
+      string: '{"songs":[{"title":"Shape of You","link":"https://www.youtube.com/embed/JGwWNGJdvx8"},{"title":"Thinking
         Out Loud","link":"https://www.youtube.com/embed/lp-EO5I60KA"},{"title":"Photograph","link":"https://www.youtube.com/embed/qgmXPCX4VzU"},{"title":"Perfect","link":"https://www.youtube.com/embed/UDDMYw_IZnE"},{"title":"South
-        of the Border","link":"https://www.youtube.com/embed/UPOT2tgY9QQ"}]'
+        of the Border","link":"https://www.youtube.com/embed/UPOT2tgY9QQ"}]}'
     http_version: 
-  recorded_at: Thu, 09 Jan 2020 23:11:41 GMT
+  recorded_at: Fri, 10 Jan 2020 02:29:42 GMT
 recorded_with: VCR 5.0.0
