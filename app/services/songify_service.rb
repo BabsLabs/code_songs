@@ -6,7 +6,6 @@ class SongifyService
     @repo = cart.repo
     @artist_id = cart.artist_id
     @heroku_url = 'https://code-songs-microservice.herokuapp.com'
-    @local_host = 'http://localhost:9292'
   end
 
   def home
