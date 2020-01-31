@@ -54,6 +54,9 @@ The following Ruby Gems are used in this project:
 ## Database
 
 ### Database Diagram
+
+CodeSongs is primarly a backend application that is driven by API endpoints and data comparison logic and as such the frontend has a very simple database.
+
 ![Database Diagram](https://raw.githubusercontent.com/BabsLabs/code_songs/readme_bb/app/assets/images/codesongs_database_design.png)
 
 ### Database Setup
